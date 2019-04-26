@@ -98,8 +98,8 @@
 				ORGANIZATIONNAME = Bitgapp;
 				TargetAttributes = {
 					222ADFEB1862531600C9BE56 = {
-						DevelopmentTeam = JZA6C97KJA;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = T4CWS5UC4D;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -108,6 +108,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 222ADFE11862531500C9BE56;
@@ -257,12 +258,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Romans Kisils (JZA6C97KJA)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = JZA6C97KJA;
+				DEVELOPMENT_TEAM = T4CWS5UC4D;
 				DSTROOT = eqMac2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -294,12 +295,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = JZA6C97KJA;
+				DEVELOPMENT_TEAM = T4CWS5UC4D;
 				DSTROOT = eqMac2;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
