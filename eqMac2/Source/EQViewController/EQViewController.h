@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import "EQHost.h"
-#import "SliderGraphView.h"
 #import "Constants.h"
 #import "AppDelegate.h"
 #import "Utilities.h"

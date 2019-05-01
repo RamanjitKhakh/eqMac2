@@ -260,32 +260,7 @@ Float32 map(Float32 x, Float32 in_min, Float32 in_max, Float32 out_min, Float32 
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-OSStatus EQEngine::ResetEqUnits(){
-    OSStatus err = noErr;
-    for (int i = 0; i < 16; i++) {
-        AudioUnitParameterID frequencyParamID = kAUNBandEQParam_Frequency + i;
-        err = AudioUnitSetParameter(mEqualizerUnit1, frequencyParamID, kAudioUnitScope_Global, 0, (AudioUnitParameterValue)0, 0);
-        checkErr(err);
-        err = AudioUnitSetParameter(mEqualizerUnit2, frequencyParamID, kAudioUnitScope_Global, 0, (AudioUnitParameterValue)0, 0);
-        checkErr(err);
-        
-        AudioUnitParameterID bypassBandParamID = kAUNBandEQParam_BypassBand + i;
-        err = AudioUnitSetParameter(mEqualizerUnit1, bypassBandParamID, kAudioUnitScope_Global, 0, (AudioUnitParameterValue)0, 0);
-        checkErr(err);
-        err = AudioUnitSetParameter(mEqualizerUnit2, bypassBandParamID, kAudioUnitScope_Global, 0,(AudioUnitParameterValue) 0, 0);
-        checkErr(err);
-        
-        AudioUnitParameterID gainParamID = kAUNBandEQParam_Gain + i;
-        err = AudioUnitSetParameter(mEqualizerUnit1, gainParamID, kAudioUnitScope_Global, 0, 0, 0);
-        checkErr(err);
-        err = AudioUnitSetParameter(mEqualizerUnit2, gainParamID, kAudioUnitScope_Global, 0, 0, 0);
-        checkErr(err);
-    }
-    return err;
-}
-
 void EQEngine::SetEqFrequencies(UInt32 *frequencies, UInt32 count){
-    ResetEqUnits();
     
     for (int i = 0; i < count; i++) {
         int incrementor = i;
@@ -377,8 +352,6 @@ OSStatus EQEngine::SetupGraph(AudioDeviceID out)
     
     err = AudioUnitSetProperty(mEqualizerUnit2, kAUNBandEQProperty_NumberOfBands, kAudioUnitScope_Global, 0, &nBands, sizeof(nBands));
     checkErr(err);
-    
-    ResetEqUnits();
     
     AudioUnitSetProperty(mFormatUnit, kAudioUnitProperty_StreamFormat, kAudioUnitScope_Input, 0, &asbd, sizeof(asbd));
 

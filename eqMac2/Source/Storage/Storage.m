@@ -232,12 +232,6 @@ static NSArray* selectedCustomGains31Bands;
     return [[self getPresets] allKeys];
 }
 
-+(void)savePresetWithName:(NSString*)name andGains:(NSArray*)gains{
-    [Logger log: [NSString stringWithFormat: @"Storage: saving preset with name: %@ and gains: %@", name, gains]];
-    NSMutableDictionary *userPresets = [[self getUserPresets] mutableCopy];
-    [userPresets setObject: @{ @"gains": gains, @"default" : @NO } forKey: name];
-    [self setUserPresets:userPresets];
-}
 +(void)deletePresetWithName:(NSString*)name{
     NSMutableDictionary *userPresets = [[self getUserPresets] mutableCopy];
     [userPresets removeObjectForKey: name];

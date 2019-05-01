@@ -18,6 +18,7 @@ eqMacStatusItemView *statusItemView;
 
 //Windows
 NSPopover *eqPopover;
+NSMenu *eqMenu;
 NSEvent *eqPopoverTransiencyMonitor;
 NSTimer *deviceChangeWatcher;
 NSTimer *deviceActivityWatcher;
@@ -35,15 +36,44 @@ NSRunningApplication *focusedApplication;
 }
 
 -(void)setupStatusBar{
-    statusItemView = [[eqMacStatusItemView alloc] init];
-    statusItemView.target = self;
+    eqMenu = [[NSMenu alloc] init];
+    [eqMenu setDelegate:self];
     
-    statusItemView.action = @selector(openEQ); //Open EQ View on Left Click
-    statusItemView.rightAction = @selector(openEQ); //Open EQ on Right Click
+    NSMenuItem *uninstall = [[NSMenuItem alloc] init];
+    [uninstall setTitle:@"Uninstall"];
+    [uninstall setAction:@selector(uninstallApp)];
+    
+    NSMenuItem *quit = [[NSMenuItem alloc] init];
+    [quit setTitle:@"Quit"];
+    [quit setAction:@selector(quitApplication)];
+    
+    [eqMenu addItem: uninstall];
+    [eqMenu addItem: quit];
         
     _statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     [_statusBar setView:statusItemView];
-    statusItemView.image = [NSImage imageNamed: [Utilities isDarkMode] ? @"statusItemLight" : @"statusItemDark"];
+    
+    //statusItemView.image = [NSImage imageNamed: [Utilities isDarkMode] ? @"statusItemLight" : @"statusItemDark"];
+    [_statusBar setImage:[NSImage imageNamed: [Utilities isDarkMode] ? @"statusItemLight" : @"statusItemDark"]];
+    [_statusBar setMenu:eqMenu];
+    [_statusBar setHighlightMode:YES];
+}
+
+-(void)uninstallApp {
+    if([Utilities showAlertWithTitle:@"Uninstall Guru Voice?"
+                          andMessage:@"Are you sure about this?"
+                          andButtons:@[@"Yes, uninstall",@"No, cancel"]] == NSAlertFirstButtonReturn){
+        
+        if([Utilities runShellScriptWithName:@"uninstall_driver"]){
+            if([EQHost EQEngineExists]) [EQHost deleteEQEngine];
+            [Utilities setLaunchOnLogin: NO];
+            NSString *helperBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/eqMac2Helper.app"];
+            [Utilities setLaunchOnLogin:NO forBundlePath: helperBundlePath];
+            [[NSFileManager defaultManager] removeItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"closeApp" object:nil];
+        }
+        
+    }
 }
 
 -(void)applicationDidFinishLaunching:(NSNotification *)notification{
@@ -61,10 +91,6 @@ NSRunningApplication *focusedApplication;
     
     eqVC = [[EQViewController alloc] initWithNibName:@"EQViewController" bundle:nil];
     
-    eqPopover = [[NSPopover alloc] init];
-    [eqPopover setDelegate:self];
-    [eqPopover setContentViewController:eqVC];
-    [eqPopover setBehavior:NSPopoverBehaviorTransient];
     
     if([Storage getAppAlreadyLaunchedBefore]){
         promotionWindowController = [[EQPromotionWindowController alloc] initWithWindowNibName:@"EQPromotionWindowController"];
@@ -82,7 +108,7 @@ NSRunningApplication *focusedApplication;
 -(void)checkAndInstallDriver{
     if(![Devices eqMacDriverInstalled]){
         //Install only the new driver
-        switch([Utilities showAlertWithTitle:@"eqMac2 Requires a Driver Update"
+        switch([Utilities showAlertWithTitle:@"Guru Voice Requires a Driver Update"
                                   andMessage:@"In order to install the driver, the app will ask for your system password."
                                   andButtons:@[@"Install", @"Quit"]]){
             case NSAlertFirstButtonReturn:{
@@ -98,8 +124,8 @@ NSRunningApplication *focusedApplication;
                                     [NSThread sleepForTimeInterval: .1];
                                     if (![Devices eqMacDriverInstalled]) {
                                         switch([Utilities showAlertWithTitle:@"Still a problem installing the Driver"
-                                                                  andMessage:@"Please restart your Mac and try to run eqMac2 again.\nIf you have restarted and retried already and it still doesn't work, \nYou can try to resolve the issue by chatting with the developer, or quit eqMac now"
-                                                                  andButtons:@[@"Chat with the developer", @"Quit eqMac2"]]){
+                                                                  andMessage:@"Please restart your Mac and try to run eqMac2 again.\nIf you have restarted and retried already and it still doesn't work, \nYou can try to resolve the issue by chatting with the developer, or quit Guru Voice now"
+                                                                  andButtons:@[@"Chat with the developer", @"Quit Guru Voice"]]){
                                             case NSAlertFirstButtonReturn: {
                                                 [Utilities openBrowserWithURL: HELP_URL];
                                             }
@@ -171,24 +197,6 @@ NSRunningApplication *focusedApplication;
     [Utilities executeBlock:^{
         [self startWatchingDeviceChanges];
     } after:3];
-}
-
-- (void)openEQ{
-    if([eqPopover isShown]){
-        [self closePopover];
-    }else{
-        [eqPopover showRelativeToRect:statusItemView.bounds ofView:statusItemView preferredEdge:NSMaxYEdge];
-        NSWindow *popoverWindow = eqPopover.contentViewController.view.window;
-        [popoverWindow.parentWindow removeChildWindow:popoverWindow];
-        [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
-        if (eqPopoverTransiencyMonitor == nil) {
-            eqPopoverTransiencyMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:(NSLeftMouseDownMask | NSRightMouseDownMask | NSKeyUpMask) handler:^(NSEvent* event) {
-                [NSEvent removeMonitor:eqPopoverTransiencyMonitor];
-                eqPopoverTransiencyMonitor = nil;
-                [self closePopover];
-            }];
-        }
-    }
 }
 
 -(void)popoverWillShow:(NSNotification *)notification{

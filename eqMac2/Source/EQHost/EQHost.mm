@@ -43,6 +43,7 @@ static NSNumber *bandMode;
 
 +(void)deleteEQEngine{
     if(mEngine){
+        Float32 lastOutputVolume = [Devices getOutputVolumeForDeviceID:[EQHost getSelectedOutputDeviceID]];
         [Devices setOutputVolumeForDeviceID:[EQHost getSelectedOutputDeviceID] to: 0]; //silence the output for now
         mEngine->Stop();
         BOOL eqMacDeviceIsMuted = [Devices getIsMutedForDeviceID: [Devices getEQMacDeviceID]];

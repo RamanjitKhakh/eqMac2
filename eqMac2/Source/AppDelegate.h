@@ -16,6 +16,6 @@
 #import "API.h"
 #import "Devices.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSPopoverDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
 @end
 

@@ -69,6 +69,7 @@ typedef enum {
         //Check if the device is input and dont add the input devices
         AudioDeviceID deviceID = devids[i];
         if([self deviceIsOutput: deviceID] && deviceID != [self getEQMacDeviceID]) {
+            
             [deviceIDs addObject:[NSNumber numberWithInt:deviceID]];
         }
         

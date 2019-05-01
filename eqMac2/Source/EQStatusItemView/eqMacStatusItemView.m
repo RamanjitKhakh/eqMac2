@@ -45,22 +45,22 @@
         [self drawImage:self.image centeredInRect:rect];
     }
 }
-
-- (void)mouseDown:(NSEvent *)theEvent{
-    [super mouseDown:theEvent];
-    [self setHighlightState:!self.clicked];
-    if ([theEvent modifierFlags] & NSCommandKeyMask){
-        [self.target performSelectorOnMainThread:self.rightAction withObject:nil waitUntilDone:NO];
-    }else{
-        [self.target performSelectorOnMainThread:self.action withObject:nil waitUntilDone:NO];
-    }
-}
-
-- (void)rightMouseDown:(NSEvent *)theEvent{
-    [super rightMouseDown:theEvent];
-    [self setHighlightState:!self.clicked];
-    [self.target performSelectorOnMainThread:self.rightAction withObject:nil waitUntilDone:NO];
-}
+//
+//- (void)mouseDown:(NSEvent *)theEvent{
+//    [super mouseDown:theEvent];
+//    [self setHighlightState:!self.clicked];
+//    if ([theEvent modifierFlags] & NSCommandKeyMask){
+//        [self.target performSelectorOnMainThread:self.rightAction withObject:theEvent waitUntilDone:NO];
+//    }else{
+//        [self.target performSelectorOnMainThread:self.action withObject:theEvent waitUntilDone:NO];
+//    }
+//}
+//
+//- (void)rightMouseDown:(NSEvent *)theEvent{
+//    [super rightMouseDown:theEvent];
+//    [self setHighlightState:!self.clicked];
+//    [self.target performSelectorOnMainThread:self.rightAction withObject:theEvent waitUntilDone:NO];
+//}
 
 - (void)dealloc{
     self.target = nil;

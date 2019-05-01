@@ -34,7 +34,6 @@
 +(NSString*)getUUID;
 
 +(NSArray*)getPresetsNames;
-+(void)savePresetWithName:(NSString*)name andGains:(NSArray*)gains;
 +(void)deletePresetWithName:(NSString*)name;
 
 +(NSArray*)getGainsForPresetName:(NSString*)presetName;
