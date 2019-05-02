@@ -7,12 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "EQViewController.h"
-#import "EQPromotionWindowController.h"
 #import "NSAppEventCatcher.h"
 #import "Storage.h"
 #import "Utilities.h"
-#import "eqMacStatusItemView.h"
 #import "API.h"
 #import "Devices.h"
 

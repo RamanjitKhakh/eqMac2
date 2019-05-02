@@ -84,6 +84,7 @@ typedef enum {
     NSArray *deviceIDs = [self getAllUsableDeviceIDs];
     NSMutableArray *devices = [[NSMutableArray alloc] init];
     for (NSNumber* deviceID in deviceIDs) {
+        NSLog(@"device id %d \n", [deviceID intValue]);
         AudioDeviceID ID = [deviceID intValue];
         NSString *deviceName = [self getDeviceNameByID: ID];
         [devices addObject: @{ @"name": deviceName, @"id": deviceID }];

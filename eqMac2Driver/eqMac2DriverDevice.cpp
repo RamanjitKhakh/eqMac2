@@ -53,9 +53,9 @@ bool eqMac2DriverDevice::initHardware(IOService *provider)
     if (!super::initHardware(provider))
         goto Done;
     
-    setDeviceName("eqMac2");
-    setDeviceShortName("eqMac2");
-    setManufacturerName("Bitgapp");
+    setDeviceName("Guru Voice Audio Device");
+    setDeviceShortName("Guru Voice");
+    setManufacturerName("Guru Technologies");
     
     if (!createAudioEngines())
         goto Done;

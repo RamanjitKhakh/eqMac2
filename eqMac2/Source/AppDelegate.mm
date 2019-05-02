@@ -12,9 +12,6 @@
 @property (strong) NSStatusItem *statusBar;
 @end
 
-//Views
-EQViewController *eqVC;
-eqMacStatusItemView *statusItemView;
 
 //Windows
 NSPopover *eqPopover;
@@ -22,7 +19,6 @@ NSMenu *eqMenu;
 NSEvent *eqPopoverTransiencyMonitor;
 NSTimer *deviceChangeWatcher;
 NSTimer *deviceActivityWatcher;
-EQPromotionWindowController *promotionWindowController;
 NSRunningApplication *focusedApplication;
 
 @implementation AppDelegate
@@ -39,6 +35,8 @@ NSRunningApplication *focusedApplication;
     eqMenu = [[NSMenu alloc] init];
     [eqMenu setDelegate:self];
     
+    NSMenuItem *appItem = [[NSMenuItem alloc] init];
+    [appItem setTitle: [NSString stringWithFormat:@"Guru Voice: Version %@", [Utilities getAppVersion]]];
     NSMenuItem *uninstall = [[NSMenuItem alloc] init];
     [uninstall setTitle:@"Uninstall"];
     [uninstall setAction:@selector(uninstallApp)];
@@ -47,13 +45,12 @@ NSRunningApplication *focusedApplication;
     [quit setTitle:@"Quit"];
     [quit setAction:@selector(quitApplication)];
     
+    [eqMenu addItem: appItem];
     [eqMenu addItem: uninstall];
     [eqMenu addItem: quit];
         
     _statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-    [_statusBar setView:statusItemView];
     
-    //statusItemView.image = [NSImage imageNamed: [Utilities isDarkMode] ? @"statusItemLight" : @"statusItemDark"];
     [_statusBar setImage:[NSImage imageNamed: [Utilities isDarkMode] ? @"statusItemLight" : @"statusItemDark"]];
     [_statusBar setMenu:eqMenu];
     [_statusBar setHighlightMode:YES];
@@ -88,14 +85,6 @@ NSRunningApplication *focusedApplication;
     [Storage load];
     
     [Utilities executeBlock:^{ [Storage save]; } every: 60];
-    
-    eqVC = [[EQViewController alloc] initWithNibName:@"EQViewController" bundle:nil];
-    
-    
-    if([Storage getAppAlreadyLaunchedBefore]){
-        promotionWindowController = [[EQPromotionWindowController alloc] initWithWindowNibName:@"EQPromotionWindowController"];
-        [promotionWindowController window];
-    }
     
     //Send anonymous analytics data to the API
     [API startPinging];
@@ -197,31 +186,6 @@ NSRunningApplication *focusedApplication;
     [Utilities executeBlock:^{
         [self startWatchingDeviceChanges];
     } after:3];
-}
-
--(void)popoverWillShow:(NSNotification *)notification{
-    focusedApplication = [[NSWorkspace sharedWorkspace] frontmostApplication];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"popoverWillOpen" object:nil];
-}
-
--(void)popoverDidShow:(NSNotification *)notification{
-    [self readjustPopover];
-}
-
--(void)readjustPopover{
-    [eqPopover setContentSize: eqPopover.contentViewController.view.frame.size];
-}
-
--(void)popoverWillClose:(NSNotification *)notification{
-    [statusItemView setHighlightState:NO];
-}
-
--(void)closePopover{
-    [eqPopover close];
-    if (focusedApplication) {
-        [focusedApplication activateWithOptions:NSApplicationActivateIgnoringOtherApps];
-        focusedApplication = nil;
-    }
 }
 
 - (void)quitApplication{

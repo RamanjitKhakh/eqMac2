@@ -7,7 +7,5 @@
 +(void)createEQEngineWithOutputDevice:(AudioDeviceID)output;
 +(void)deleteEQEngine;
 +(BOOL)EQEngineExists;
-+(void)setEQEngineFrequencyGains:(NSArray*)gains;
-+(NSArray*)getEQEngineFrequencyGains;
 +(AudioDeviceID)getSelectedOutputDeviceID;
 @end
