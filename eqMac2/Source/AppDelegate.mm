@@ -76,8 +76,6 @@ NSRunningApplication *focusedApplication;
 -(void)applicationDidFinishLaunching:(NSNotification *)notification{
     NSNotificationCenter *observer = [NSNotificationCenter defaultCenter];
     [observer addObserver:self selector:@selector(quitApplication) name:@"closeApp" object:nil];
-    [observer addObserver:self selector:@selector(closePopover) name:@"escapePressed" object:nil];
-    [observer addObserver:self selector:@selector(readjustPopover) name:@"readjustPopover" object:nil];
     
     [self checkAndInstallDriver];
     [self startHelperIfNeeded];
