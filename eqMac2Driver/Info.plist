@@ -30,7 +30,7 @@
 					<key>BlockSize</key>
 					<integer>8192</integer>
 					<key>Description</key>
-					<string>eqMac2</string>
+					<string>GuruAudioDevice</string>
 					<key>Formats</key>
 					<array>
 						<dict>
