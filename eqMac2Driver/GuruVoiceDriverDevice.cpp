@@ -24,8 +24,8 @@
 	THE SOFTWARE.
  */
 
-#include "eqMac2DriverDevice.h"
-#include "eqMac2DriverEngine.h"
+#include "GuruVoiceDriverDevice.h"
+#include "GuruVoiceDriverEngine.h"
 #include <IOKit/audio/IOAudioControl.h>
 #include <IOKit/audio/IOAudioLevelControl.h>
 #include <IOKit/audio/IOAudioToggleControl.h>

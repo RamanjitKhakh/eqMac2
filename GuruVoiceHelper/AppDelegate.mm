@@ -31,9 +31,9 @@ AudioDeviceID previouslySelectedDeviceID;
 -(void)checkDevice{
     AudioDeviceID selectedDeviceID = [self getCurrentDeviceID];
     NSString *selectedDeviceName = [self getDeviceNameByID: selectedDeviceID];
-    if ([selectedDeviceName isEqualToString:@"eqMac2"] && ![self eqMacAppIsRunning]) {
+    if ([selectedDeviceName isEqualToString:@"GuruVoiceApp"] && ![self eqMacAppIsRunning]) {
         AudioDeviceID switchDeviceID = previouslySelectedDeviceID;
-        if (!previouslySelectedDeviceID || [[self getDeviceNameByID:previouslySelectedDeviceID] isEqualToString:@"eqMac2"]) {
+        if (!previouslySelectedDeviceID || [[self getDeviceNameByID:previouslySelectedDeviceID] isEqualToString:@"GuruVoiceApp"]) {
             switchDeviceID = [self getBuiltInDeviceID];
         }
         [self switchToDeviceWithID: switchDeviceID];
@@ -45,7 +45,7 @@ AudioDeviceID previouslySelectedDeviceID;
 -(BOOL)eqMacAppIsRunning{
     NSArray *runningApplications = [[NSWorkspace sharedWorkspace] runningApplications];
     for (NSRunningApplication *application in runningApplications) {
-        if ([[application bundleIdentifier] isEqualToString:@"com.bitgapp.eqMac2"]) {
+        if ([[application bundleIdentifier] isEqualToString:@"com.getguru.GuruVoiceApp"]) {
             return true;
         }
     }

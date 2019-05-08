@@ -28,7 +28,7 @@
 #define _eqMac2DriverENGINE_H
 
 #include <IOKit/audio/IOAudioEngine.h>
-#include "eqMac2DriverDevice.h"
+#include "GuruVoiceDriverDevice.h"
 
 
 class eqMac2DriverEngine : public IOAudioEngine

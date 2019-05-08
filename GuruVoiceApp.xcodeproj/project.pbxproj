@@ -16,11 +16,9 @@
 		30A77E8C1BFB094F00503E6E /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A77E8B1BFB094F00503E6E /* AudioUnit.framework */; };
 		C7E49B3F727A9657BBC43E9B /* Pods_eqMac2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB898D1CC464E56A965D8E4A /* Pods_eqMac2.framework */; };
 		E01871471FAFC70C0084ECAA /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = E01871461FAFC70C0084ECAA /* Logger.m */; };
-		E036A54F1FBE4C1400A4FF07 /* eqMac2Driver.kext in Resources */ = {isa = PBXBuildFile; fileRef = E036A54C1FBE3DE900A4FF07 /* eqMac2Driver.kext */; };
 		E07BF4B51D6B4BA400589F0C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07BF4B41D6B4BA400589F0C /* WebKit.framework */; };
 		E080F8DA1FCB07640071A222 /* open_security_settings.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E080F8D91FCB07640071A222 /* open_security_settings.scpt */; };
 		E09DCA731FC0B1CC00046CDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09DCA721FC09A8F00046CDC /* Assets.xcassets */; };
-		E09DCA771FC0BBE200046CDC /* eqMac2Helper.app in Resources */ = {isa = PBXBuildFile; fileRef = E09DCA761FC0BBDF00046CDC /* eqMac2Helper.app */; };
 		E0B5F0961F25EEE4005C5F46 /* statusItemLight.png in Resources */ = {isa = PBXBuildFile; fileRef = E0B5F0841F25EEE4005C5F46 /* statusItemLight.png */; };
 		E0B7814D1EF704660076B3AB /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B7812C1EF704660076B3AB /* API.m */; };
 		E0B7814E1EF704660076B3AB /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B7812F1EF704660076B3AB /* Constants.m */; };
@@ -51,6 +49,8 @@
 		E0B781D01EF706670076B3AB /* NSAppEventCather.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B781CC1EF706670076B3AB /* NSAppEventCather.m */; };
 		E0FC9EC71FC3822200BECC9E /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0FC9EC61FC3821D00BECC9E /* Main.xib */; };
 		F142853C227A44E700A0067F /* statusItemDark.png in Resources */ = {isa = PBXBuildFile; fileRef = F142853B227A44E700A0067F /* statusItemDark.png */; };
+		F18FA9F32282138A00396DB2 /* GuruVoiceHelper.app in Resources */ = {isa = PBXBuildFile; fileRef = F18FA9F22282138900396DB2 /* GuruVoiceHelper.app */; };
+		F18FA9F52283167300396DB2 /* GuruVoiceDriver.kext in Resources */ = {isa = PBXBuildFile; fileRef = F18FA9F42283167300396DB2 /* GuruVoiceDriver.kext */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,7 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		306DA1C71BEF965F002CB1C9 /* eqMac2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eqMac2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		306DA1C71BEF965F002CB1C9 /* GuruVoiceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruVoiceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A77E7F1BFB091100503E6E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		30A77E811BFB091700503E6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		30A77E831BFB092200503E6E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -80,11 +80,9 @@
 		CB898D1CC464E56A965D8E4A /* Pods_eqMac2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eqMac2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01871451FAFC70C0084ECAA /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		E01871461FAFC70C0084ECAA /* Logger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
-		E036A54C1FBE3DE900A4FF07 /* eqMac2Driver.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = eqMac2Driver.kext; sourceTree = "<group>"; };
 		E07BF4B41D6B4BA400589F0C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E080F8D91FCB07640071A222 /* open_security_settings.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = open_security_settings.scpt; sourceTree = "<group>"; };
 		E09DCA721FC09A8F00046CDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E09DCA761FC0BBDF00046CDC /* eqMac2Helper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = eqMac2Helper.app; sourceTree = "<group>"; };
 		E0B0A7E51EA023F800D2BB98 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		E0B5F0841F25EEE4005C5F46 /* statusItemLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusItemLight.png; sourceTree = "<group>"; };
 		E0B7812B1EF704660076B3AB /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
@@ -134,6 +132,8 @@
 		E0B781CC1EF706670076B3AB /* NSAppEventCather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAppEventCather.m; sourceTree = "<group>"; };
 		E0FC9EC61FC3821D00BECC9E /* Main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 		F142853B227A44E700A0067F /* statusItemDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusItemDark.png; sourceTree = "<group>"; };
+		F18FA9F22282138900396DB2 /* GuruVoiceHelper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = GuruVoiceHelper.app; sourceTree = "<group>"; };
+		F18FA9F42283167300396DB2 /* GuruVoiceDriver.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = GuruVoiceDriver.kext; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +169,7 @@
 		306DA1C81BEF965F002CB1C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				306DA1C71BEF965F002CB1C9 /* eqMac2.app */,
+				306DA1C71BEF965F002CB1C9 /* GuruVoiceApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,8 +224,8 @@
 		E0616A591FADCC7000B5B19E /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				E09DCA761FC0BBDF00046CDC /* eqMac2Helper.app */,
-				E036A54C1FBE3DE900A4FF07 /* eqMac2Driver.kext */,
+				F18FA9F42283167300396DB2 /* GuruVoiceDriver.kext */,
+				F18FA9F22282138900396DB2 /* GuruVoiceHelper.app */,
 				E0B7813F1EF704660076B3AB /* defaultPresets.plist */,
 				E0B781CA1EF706670076B3AB /* main.m */,
 				E0FC9EC61FC3821D00BECC9E /* Main.xib */,
@@ -409,9 +409,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		306DA1C61BEF965F002CB1C9 /* eqMac2 */ = {
+		306DA1C61BEF965F002CB1C9 /* GuruVoiceApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 306DA1D81BEF965F002CB1C9 /* Build configuration list for PBXNativeTarget "eqMac2" */;
+			buildConfigurationList = 306DA1D81BEF965F002CB1C9 /* Build configuration list for PBXNativeTarget "GuruVoiceApp" */;
 			buildPhases = (
 				9E1691950E7383BA8C511F30 /* [CP] Check Pods Manifest.lock */,
 				306DA1C31BEF965F002CB1C9 /* Sources */,
@@ -424,9 +424,9 @@
 			);
 			dependencies = (
 			);
-			name = eqMac2;
+			name = GuruVoiceApp;
 			productName = eqMacPro;
-			productReference = 306DA1C71BEF965F002CB1C9 /* eqMac2.app */;
+			productReference = 306DA1C71BEF965F002CB1C9 /* GuruVoiceApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -445,7 +445,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 306DA1C21BEF965F002CB1C9 /* Build configuration list for PBXProject "eqMac2" */;
+			buildConfigurationList = 306DA1C21BEF965F002CB1C9 /* Build configuration list for PBXProject "GuruVoiceApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -459,7 +459,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				306DA1C61BEF965F002CB1C9 /* eqMac2 */,
+				306DA1C61BEF965F002CB1C9 /* GuruVoiceApp */,
 			);
 		};
 /* End PBXProject section */
@@ -470,12 +470,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B781B51EF704BA0076B3AB /* 48x48.png in Resources */,
+				F18FA9F52283167300396DB2 /* GuruVoiceDriver.kext in Resources */,
 				E0FC9EC71FC3822200BECC9E /* Main.xib in Resources */,
 				E0B781B11EF704BA0076B3AB /* 16x16.png in Resources */,
+				F18FA9F32282138A00396DB2 /* GuruVoiceHelper.app in Resources */,
 				E0B781B71EF704BA0076B3AB /* 64x64.png in Resources */,
 				E0B781B31EF704BA0076B3AB /* 256x256.png in Resources */,
 				E080F8DA1FCB07640071A222 /* open_security_settings.scpt in Resources */,
-				E09DCA771FC0BBE200046CDC /* eqMac2Helper.app in Resources */,
 				E0B781B21EF704BA0076B3AB /* 24x24.png in Resources */,
 				E0B781B81EF704BA0076B3AB /* 96x96.png in Resources */,
 				E0B781B61EF704BA0076B3AB /* 512x512.png in Resources */,
@@ -484,7 +485,6 @@
 				E09DCA731FC0B1CC00046CDC /* Assets.xcassets in Resources */,
 				E0B781541EF704660076B3AB /* defaultPresets.plist in Resources */,
 				E0B781561EF704660076B3AB /* install_driver.sh in Resources */,
-				E036A54F1FBE4C1400A4FF07 /* eqMac2Driver.kext in Resources */,
 				F142853C227A44E700A0067F /* statusItemDark.png in Resources */,
 				E0B781571EF704660076B3AB /* uninstall_driver.sh in Resources */,
 				E0B781B01EF704BA0076B3AB /* 128x128.png in Resources */,
@@ -665,7 +665,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/eqMac2/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bitgapp.eqMac2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.getguru.GuruVoiceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "436b674f-56fa-48cd-9846-cd9ef65d7a8e";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -691,7 +691,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/eqMac2/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bitgapp.eqMac2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.getguru.GuruVoiceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -701,7 +701,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		306DA1C21BEF965F002CB1C9 /* Build configuration list for PBXProject "eqMac2" */ = {
+		306DA1C21BEF965F002CB1C9 /* Build configuration list for PBXProject "GuruVoiceApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				306DA1D61BEF965F002CB1C9 /* Debug */,
@@ -710,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		306DA1D81BEF965F002CB1C9 /* Build configuration list for PBXNativeTarget "eqMac2" */ = {
+		306DA1D81BEF965F002CB1C9 /* Build configuration list for PBXNativeTarget "GuruVoiceApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				306DA1D91BEF965F002CB1C9 /* Debug */,

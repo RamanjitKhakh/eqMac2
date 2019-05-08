@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This app requires microphone access</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -34,6 +32,8 @@
 	<string>Copyright © 2015-2017 Bitgapp. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>Main</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires microphone access</string>
 	<key>NSPrincipalClass</key>
 	<string>NSAppEventCatcher</string>
 	<key>SUFeedURL</key>

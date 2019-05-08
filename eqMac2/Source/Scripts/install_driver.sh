@@ -4,12 +4,12 @@
 spctl --master-disable
 
 # remove eqMac 1.0 driver
-kextunload /System/Library/Extensions/eqMacDriver.kext/
-rm -rf /System/Library/Extensions/eqMacDriver.kext/
+kextunload /System/Library/Extensions/GuruVoiceDriver.kext/
+rm -rf /System/Library/Extensions/GuruVoiceDriver.kext/
 
 # remove eqMac < 2.1 driver
-kextunload /System/Library/Extensions/eqMac2Driver.kext/
-rm -rf /System/Library/Extensions/eqMac2Driver.kext/
+kextunload /System/Library/Extensions/GuruVoiceDriver.kext/
+rm -rf /System/Library/Extensions/GuruVoiceDriver.kext/
 
 touch /System/Library/Extensions
 
@@ -17,7 +17,7 @@ touch /System/Library/Extensions
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # install the new driver
-cp -R $DIR/eqMac2Driver.kext /System/Library/Extensions/
-kextload -tv /System/Library/Extensions/eqMac2Driver.kext
+cp -R $DIR/GuruVoiceDriver.kext /System/Library/Extensions/
+kextload -tv /System/Library/Extensions/GuruVoiceDriver.kext
 touch /System/Library/Extensions
 

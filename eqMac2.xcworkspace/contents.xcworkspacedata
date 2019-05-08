@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:eqMac2.xcodeproj">
+      location = "group:/Users/raman/Documents/guru-repos/eqMac2/GuruVoiceApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:eqMac2Driver.xcodeproj">
+      location = "group:/Users/raman/Documents/guru-repos/eqMac2/GuruVoiceDriver.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:eqMac2Helper.xcodeproj">
+      location = "group:/Users/raman/Documents/guru-repos/eqMac2/GuruVoiceHelper.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

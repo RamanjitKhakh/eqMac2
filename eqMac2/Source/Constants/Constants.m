@@ -2,12 +2,12 @@
 #import <Foundation/Foundation.h>
 #import "Constants.h"
 
-NSString * const HELPER_BUNDLE_IDENTIFIER = @"com.bitgapp.eqMac2Helper";
+NSString * const HELPER_BUNDLE_IDENTIFIER = @"com.getguru.GuruVoiceHelper";
 NSString * const DRIVER_UID = @"EQMAC2.1_DRIVER_ENGINE";
 NSString * const API_URL = @"https://eqmac-api.bitgapp.com";
 NSString * const APP_URL = @"https://bitgapp.com/eqmac/";
 NSString * const SUPPORT_URL = @"https://bitgapp.com/eqmac/#/donate";
-NSString * const HELP_URL = @"https://go.crisp.chat/chat/embed/?website_id=d43e2906-97e3-4c50-82ea-6fa04383b983";
+NSString * const HELP_URL = @"https://getguru.com";
 Float32 const FULL_VOLUME_STEP = 0.0625;
 Float32 const QUARTER_VOLUME_STEP = 0.015625;
 BOOL const LOG = YES;

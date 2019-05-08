@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E080114A1F9BDBE3004389C0 /* eqMac2DriverDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E08011461F9BCEF7004389C0 /* eqMac2DriverDevice.cpp */; };
-		E080114B1F9BDBE6004389C0 /* eqMac2DriverEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E08011451F9BCEF7004389C0 /* eqMac2DriverEngine.cpp */; };
-		E080114C1F9BDBF3004389C0 /* eqMac2DriverEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E08011471F9BCEF7004389C0 /* eqMac2DriverEngine.h */; };
-		E080114D1F9BDBFC004389C0 /* eqMac2DriverDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = E08011491F9BCEF7004389C0 /* eqMac2DriverDevice.h */; };
+		E080114A1F9BDBE3004389C0 /* GuruVoiceDriverDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E08011461F9BCEF7004389C0 /* GuruVoiceDriverDevice.cpp */; };
+		E080114B1F9BDBE6004389C0 /* GuruVoiceDriverEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E08011451F9BCEF7004389C0 /* GuruVoiceDriverEngine.cpp */; };
+		E080114C1F9BDBF3004389C0 /* GuruVoiceDriverEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E08011471F9BCEF7004389C0 /* GuruVoiceDriverEngine.h */; };
+		E080114D1F9BDBFC004389C0 /* GuruVoiceDriverDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = E08011491F9BCEF7004389C0 /* GuruVoiceDriverDevice.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		222ADFEC1862531600C9BE56 /* eqMac2Driver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eqMac2Driver.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		E08011451F9BCEF7004389C0 /* eqMac2DriverEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = eqMac2DriverEngine.cpp; path = eqMac2Driver/eqMac2DriverEngine.cpp; sourceTree = "<group>"; };
-		E08011461F9BCEF7004389C0 /* eqMac2DriverDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = eqMac2DriverDevice.cpp; path = eqMac2Driver/eqMac2DriverDevice.cpp; sourceTree = "<group>"; };
-		E08011471F9BCEF7004389C0 /* eqMac2DriverEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = eqMac2DriverEngine.h; path = eqMac2Driver/eqMac2DriverEngine.h; sourceTree = "<group>"; };
+		222ADFEC1862531600C9BE56 /* GuruVoiceDriver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuruVoiceDriver.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08011451F9BCEF7004389C0 /* GuruVoiceDriverEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GuruVoiceDriverEngine.cpp; path = eqMac2Driver/GuruVoiceDriverEngine.cpp; sourceTree = "<group>"; };
+		E08011461F9BCEF7004389C0 /* GuruVoiceDriverDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GuruVoiceDriverDevice.cpp; path = eqMac2Driver/GuruVoiceDriverDevice.cpp; sourceTree = "<group>"; };
+		E08011471F9BCEF7004389C0 /* GuruVoiceDriverEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GuruVoiceDriverEngine.h; path = eqMac2Driver/GuruVoiceDriverEngine.h; sourceTree = "<group>"; };
 		E08011481F9BCEF7004389C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = eqMac2Driver/Info.plist; sourceTree = "<group>"; };
-		E08011491F9BCEF7004389C0 /* eqMac2DriverDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = eqMac2DriverDevice.h; path = eqMac2Driver/eqMac2DriverDevice.h; sourceTree = "<group>"; };
+		E08011491F9BCEF7004389C0 /* GuruVoiceDriverDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GuruVoiceDriverDevice.h; path = eqMac2Driver/GuruVoiceDriverDevice.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,10 +36,10 @@
 		222ADFE11862531500C9BE56 = {
 			isa = PBXGroup;
 			children = (
-				E08011461F9BCEF7004389C0 /* eqMac2DriverDevice.cpp */,
-				E08011491F9BCEF7004389C0 /* eqMac2DriverDevice.h */,
-				E08011451F9BCEF7004389C0 /* eqMac2DriverEngine.cpp */,
-				E08011471F9BCEF7004389C0 /* eqMac2DriverEngine.h */,
+				E08011461F9BCEF7004389C0 /* GuruVoiceDriverDevice.cpp */,
+				E08011491F9BCEF7004389C0 /* GuruVoiceDriverDevice.h */,
+				E08011451F9BCEF7004389C0 /* GuruVoiceDriverEngine.cpp */,
+				E08011471F9BCEF7004389C0 /* GuruVoiceDriverEngine.h */,
 				E08011481F9BCEF7004389C0 /* Info.plist */,
 				222ADFED1862531600C9BE56 /* Products */,
 			);
@@ -48,7 +48,7 @@
 		222ADFED1862531600C9BE56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				222ADFEC1862531600C9BE56 /* eqMac2Driver.kext */,
+				222ADFEC1862531600C9BE56 /* GuruVoiceDriver.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,17 +60,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E080114D1F9BDBFC004389C0 /* eqMac2DriverDevice.h in Headers */,
-				E080114C1F9BDBF3004389C0 /* eqMac2DriverEngine.h in Headers */,
+				E080114D1F9BDBFC004389C0 /* GuruVoiceDriverDevice.h in Headers */,
+				E080114C1F9BDBF3004389C0 /* GuruVoiceDriverEngine.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		222ADFEB1862531600C9BE56 /* eqMac2Driver */ = {
+		222ADFEB1862531600C9BE56 /* GuruVoiceDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 222ADFFC1862531600C9BE56 /* Build configuration list for PBXNativeTarget "eqMac2Driver" */;
+			buildConfigurationList = 222ADFFC1862531600C9BE56 /* Build configuration list for PBXNativeTarget "GuruVoiceDriver" */;
 			buildPhases = (
 				222ADFE61862531600C9BE56 /* Sources */,
 				222ADFE71862531600C9BE56 /* Frameworks */,
@@ -83,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = eqMac2Driver;
+			name = GuruVoiceDriver;
 			productName = Soundflower;
-			productReference = 222ADFEC1862531600C9BE56 /* eqMac2Driver.kext */;
+			productReference = 222ADFEC1862531600C9BE56 /* GuruVoiceDriver.kext */;
 			productType = "com.apple.product-type.kernel-extension";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 222ADFE51862531600C9BE56 /* Build configuration list for PBXProject "eqMac2Driver" */;
+			buildConfigurationList = 222ADFE51862531600C9BE56 /* Build configuration list for PBXProject "GuruVoiceDriver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				222ADFEB1862531600C9BE56 /* eqMac2Driver */,
+				222ADFEB1862531600C9BE56 /* GuruVoiceDriver */,
 			);
 		};
 /* End PBXProject section */
@@ -164,8 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E080114B1F9BDBE6004389C0 /* eqMac2DriverEngine.cpp in Sources */,
-				E080114A1F9BDBE3004389C0 /* eqMac2DriverDevice.cpp in Sources */,
+				E080114B1F9BDBE6004389C0 /* GuruVoiceDriverEngine.cpp in Sources */,
+				E080114A1F9BDBE3004389C0 /* GuruVoiceDriverDevice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		222ADFE51862531600C9BE56 /* Build configuration list for PBXProject "eqMac2Driver" */ = {
+		222ADFE51862531600C9BE56 /* Build configuration list for PBXProject "GuruVoiceDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				222ADFFA1862531600C9BE56 /* Debug */,
@@ -334,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		222ADFFC1862531600C9BE56 /* Build configuration list for PBXNativeTarget "eqMac2Driver" */ = {
+		222ADFFC1862531600C9BE56 /* Build configuration list for PBXNativeTarget "GuruVoiceDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				222ADFFD1862531600C9BE56 /* Debug */,

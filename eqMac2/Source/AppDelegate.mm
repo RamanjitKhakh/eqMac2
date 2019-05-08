@@ -64,7 +64,7 @@ NSRunningApplication *focusedApplication;
         if([Utilities runShellScriptWithName:@"uninstall_driver"]){
             if([EQHost EQEngineExists]) [EQHost deleteEQEngine];
             [Utilities setLaunchOnLogin: NO];
-            NSString *helperBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/eqMac2Helper.app"];
+            NSString *helperBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/GuruVoiceHelper.app"];
             [Utilities setLaunchOnLogin:NO forBundlePath: helperBundlePath];
             [[NSFileManager defaultManager] removeItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"closeApp" object:nil];
@@ -146,7 +146,7 @@ NSRunningApplication *focusedApplication;
 }
 
 -(void)startHelperIfNeeded{
-    NSString *helperBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/eqMac2Helper.app"];
+    NSString *helperBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/GuruVoiceHelper.app"];
     [Utilities setLaunchOnLogin:YES forBundlePath: helperBundlePath];
     if (![Utilities appWithBundleIdentifierIsRunning: HELPER_BUNDLE_IDENTIFIER]) {
         [[NSWorkspace sharedWorkspace] launchApplication: helperBundlePath];
