@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GuruVoiceHelper.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>eqMac2Helper.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
