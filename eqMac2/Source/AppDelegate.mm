@@ -66,7 +66,7 @@ NSRunningApplication *focusedApplication;
             [Utilities setLaunchOnLogin: NO];
             NSString *helperBundlePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/Contents/Resources/GuruVoiceHelper.app"];
             [Utilities setLaunchOnLogin:NO forBundlePath: helperBundlePath];
-            [[NSFileManager defaultManager] removeItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
+            //[[NSFileManager defaultManager] removeItemAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"closeApp" object:nil];
         }
         

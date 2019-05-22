@@ -31,9 +31,9 @@ AudioDeviceID previouslySelectedDeviceID;
 -(void)checkDevice{
     AudioDeviceID selectedDeviceID = [self getCurrentDeviceID];
     NSString *selectedDeviceName = [self getDeviceNameByID: selectedDeviceID];
-    if ([selectedDeviceName isEqualToString:@"GuruVoiceApp"] && ![self eqMacAppIsRunning]) {
+    if ([selectedDeviceName isEqualToString:@"GuruAudioDevice"] && ![self eqMacAppIsRunning]) {
         AudioDeviceID switchDeviceID = previouslySelectedDeviceID;
-        if (!previouslySelectedDeviceID || [[self getDeviceNameByID:previouslySelectedDeviceID] isEqualToString:@"GuruVoiceApp"]) {
+        if (!previouslySelectedDeviceID || [[self getDeviceNameByID:previouslySelectedDeviceID] isEqualToString:@"GuruAudioDevice"]) {
             switchDeviceID = [self getBuiltInDeviceID];
         }
         [self switchToDeviceWithID: switchDeviceID];
